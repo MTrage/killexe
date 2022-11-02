@@ -1,0 +1,221 @@
+#!/bin/sh 
+# killexe by Marc-André Tragé 2017 free 4 all
+# I hope it is as useful for you as it is for me, have fun with it.
+
+# Originally I wanted to include 5 of the riddles in an online game,
+# but unfortunately I can't find the time. That's why these and 2 others can now be found here.
+
+# Riddle number 1 - all riddles have to be aligned in their result to get the solution number!
+# I have a special surprise for the first person who solves all 7 riddles!
+
+# x^(x^(x^(x^1.58647106148248612241588864347681118893417936193490522083621911931840763818262))) = 999999999999999999999999999999999999999999999999999999999999999999999999986601,57
+
+all="-"
+kiss=${#1}
+n=$(tput sgr0)
+b=$(tput bold)
+X=$all$all$all$all$all$all$all$all$all$all
+heres='[V 0.42]'
+dont_say_a_word=false
+
+k75='X19fXCMgXCAgIF9fX19fX19fX19cbiAg' #                       0123456789,
+f86='OlwgXG4gICAgICAgICBcOjo6XCBcbgo=' #  ..the              H 3
+t68='Ojo6OlwvOjo6LyMjX3wjIyB8IyMgfC8j' # solutions......     U 6
+m85='IC5fX1xuIDs6OlwgICAgX19fXyAgICAg' #  ..to               O 0
+p98='I1wgXG4gIDo6OnxcOjo6XHwjIyB8IyMg' #  the.               E 1
+e88='IFxfX19fX1xuICA6Ojp8IFw6OjpcIyNf' # ...riddle[s]        D 9
+k17='IHwjIC9fX18gICAgXCNfIF9fLyMgL19f' #      .are           A 4
+f71='XCAgLzo6Oi9fXyBfX18gX19fICBfX19f' #      not..          O 0
+n59='XCNfXCMjIyMjXy9cbiAgICAgICAgXDo6' #   part...           A 4
+g49='ICAgICAgICAgICAgICBfX19cbiAgOjo6' #    ..of             F 8
+t47='fCMjX3wjI198IFwjIyMjI18vICAgICAg' #    the.             E 1
+l56='X1xuICA6Ojo6Ojo6XCB8IyMgfCMjIHwj' # script...           I 7
+x74='IyB8IyMjIyNfXCAgIC8jIF8jIFwjIyMj' # functions.....      T ,
+j54='IyMjI18vIFwjIFxfLyMgLyMjIyMjXy9c' #   .or               O 0
+x97='biAgOjo6OjpeXl7CsCBfX18gIyMgfCMj' #  ...its             S 5
+w62='fCMjIHxcIyBcX19fX18vI18vIFwjIFwj' #  structure......... C 2
+
+z75=" " t53="h" k0d="d" mt7="o" rs2="6" h6e="4" v5c="c" k2g="e" m4d="b" io7="a" l9c="s"
+
+h0='VUlE' h1='ICAg' h2='IFBJ' h3='RCAg' h4='UFBJ'
+h5='ICBD' h6='IFNU' h7='SU1F' h8='IFRU' h9='WSAg'
+hx='IFRJ' hy='TUUg' hz='IENN' hw='RAo='
+
+# It is true that not only the cow knows the secret of the soup - but the cake is a lie!
+j3v=$m85$g49$f71$k75$t68$j54$x97$k17$l56$x74$p98$w62$e88$t47$n59$f86
+
+gfj=$mt7$z75
+d4o=$z75$all$all
+
+alpha=$k2g$v5c$t53$gfj$j3v
+memento=$h0$h1$h1$h2$h3$h1$h4$h3$h5$h6$h7$h8$h9$h1$hx$hy
+omega=$m4d$io7$l9c$k2g$rs2$h6e$d4o$k0d$k2g$v5c$mt7$k0d$k2g
+# It's not the skin of the onion she holds in her hands,
+# but the thoughts of the dance in youth that makes her strangle giraffes!
+info=$omega
+
+many_metres_i_have_to_walk=149600000000
+the_pure_taste_of_a_real_number='^[0-9]+$'
+to_be_or_not_to_be=$(ps -Af | grep "[.]exe" | wc -m)
+computer_says_no='––> No *.exe tasks are currently started!'
+
+illuminatio=$($k2g$v5c$t53$gfj$memento | $info)
+vittoria_di_pirro=$($alpha | $omega)
+# It sits back in school and will hold its breath until it is back at the stand,
+# balancing a tabernacle on its back!
+
+help()
+{
+ echo " Call: killexe [${b}OPTION${n}]
+ ${b}The following options in long as well as short form:${n}
+   ${b}-i -l       --info --list${n} S        hows which *.exe tasks are
+                                      currently running in the system.
+   ${b}-n          --now    now    NOW${n}    All *.exe tasks are motivated
+                                      to commit suicide.
+   ${b}-w${n} [${b}number${n}] ${b}--wait${n} [${b}number${n}]        Starts with a time delay.
+   ${b}-c${n} [${b}number${n}] ${b}--cycle${n} [${b}number${n}]       Number of repetitions of killexe.
+   ${b}-s${n}          ${b}--silent${n}               if this option is appended,
+                                      no error message is output!
+ $X$X$X$X$X$X$X–
+ ${b}Here are 3 examples:${n}
+   killexe ${b}now${n}                        Motivates all *.exe task
+                                      to commit suicide.
+   killexe ${b}-w 5${n}                       Wait 3 seconds and then motivate
+                                      all *.exe tasks to commit suicide.
+   killexe ${b}-c 3${n}                       Execute script 3 times, wait 5
+                                      seconds between each execution.
+   ${b}-m${n} ${b}--more${n}                          For more information on killexe.
+ –$X$X$X$X$X$X– $heres"
+ exit 1
+}
+
+more()
+{
+ printf "$vittoria_di_pirro"
+ echo " > ${b}killexe${n} is a simple script that can show which *.exe tasks are
+ currently running in the system. If the user wishes, all *.exe
+ tasks can be motivated to commit suicide.
+ $X$X$X$X$X$X$X–
+ ${b}The following tools are required${n}
+      # ${b}ps${n}         displays running processes.
+      # ${b}wc${n}         count words, characters and bytes.
+      # ${b}awk${n}        Scripting language for editing and analyzing texts.
+      # ${b}grep${n}       searches outputs for specific pieces of text.
+      # ${b}kill${n}       kills tasks when the process ID is specified.
+      # ${b}sleep${n}      sets a sequence pause.
+      # ${b}xargs${n}      takes an output value and a program call and
+                   reshapes it to a program call with output value.
+      # ${b}base64${n}     is only needed for the more information option
+                   and possibly also for a part of the decryption
+                   of the 7 hidden riddles!
+ –$X$X$X$X$X$X– $heres"
+ exit 1
+}
+
+if [ "$1" = "-s" ] || [ "$1" = "--silent" ] || [ "$2" = "-s" ] || [ "$2" = "--silent" ] || [ "$3" = "-s" ] || [ "$3" = "--silent" ]; then
+    dont_say_a_word=true
+fi
+
+run_killexe_run()
+{
+    ps -ef 2> /dev/null | grep '[.]exe' 2> /dev/null | awk '{print $2}' 2> /dev/null | xargs -r kill -9 2> /dev/null &
+}
+
+all_is_a_cycle()
+{
+    while [[ i -le $many_metres_i_have_to_walk ]];
+    do
+    i=$((i+1));
+    run_killexe_run
+    sleep 3
+    done;
+}
+# Not and yet there forever!
+
+case "$1" in
+   -m|--more) more
+        exit 1;;
+   -h|--help)
+        help
+        exit 1;;
+   -i|-l|-s|--info|--list|--status)
+        if [ $to_be_or_not_to_be == 0 ];
+            then
+                if [ "$dont_say_a_word" = false ]; then
+                    echo "${b}$computer_says_no${n}"
+                    exit 1
+                fi
+            else
+            echo "${b}$illuminatio${n}"
+            ps -Af | grep "[.]exe"
+        fi
+        exit 1;;
+   -n|--now|now|NOW)
+        if [ $to_be_or_not_to_be == 0 ];
+            then
+                if [ "$dont_say_a_word" = false ]; then
+                    echo "${b}$computer_says_no${n}"
+                    exit 1
+                fi
+            else
+            run_killexe_run
+        fi
+        exit 1;;
+   -w|--wait)
+        if [ $to_be_or_not_to_be == 0 ];
+            then
+                if [ "$dont_say_a_word" = false ]; then
+                    echo "${b}$computer_says_no${n}"
+                    exit 1
+                fi
+            exit 1
+        fi
+        if ! [[ $2 =~ $the_pure_taste_of_a_real_number ]];
+            then
+                help
+                exit 1
+            else
+                sleep $2
+                run_killexe_run
+                exit 1
+        fi
+        exit 1;;
+   -c|--cycle)
+        if [ $to_be_or_not_to_be == 0 ];
+            then
+                if [ "$dont_say_a_word" = false ]; then
+                    echo "${b}$computer_says_no${n}"
+                    exit 1
+                fi
+            exit 1
+        fi
+        if ! [[ $2 =~ $the_pure_taste_of_a_real_number ]];
+            then
+                help
+                exit 1
+            else
+                many_metres_i_have_to_walk=$2-1
+                all_is_a_cycle
+                exit 1
+        fi
+        exit 1;;
+esac
+
+if [ $kiss == 0 ]; then
+    echo " ${b}ERROR please select an OPTION${n}!"
+    help
+    exit 1
+fi
+
+echo " ${b}ERROR $1 is an unknown OPTION${n}!"
+help
+exit 1
+
+# 00111110 01010100 01101000 01100101 00100000 01110011 01101111 01101100 01110101 01110100 01101001 01101111 01101110 01110011 00100000 01100110 01101111 01110010
+# 00100000 01110100 01101000 01100101 00100000 01110010 01101001 01100100 01100100 01101100 01100101 01110011 00100000 01101001 01101110 01100011 01110010 01100101
+# 01100001 01110011 01100101 00100000 01110000 01100001 01110010 01100001 01100010 01101111 01101100 01101001 01100011 01100001 01101100 01101100 01111001 00100000
+# 01101001 01101110 00100000 01110100 01101000 01100101 01101001 01110010 00100000 01100100 01100101 01100111 01110010 01100101 01100101 00100000 01101111 01100110
+# 00100000 01100100 01101001 01100110 01100110 01101001 01100011 01110101 01101100 01110100 01111001 00101100 00100000 01110100 01101000 01100101 00100000 01101100
+# 01100001 01110011 01110100 00100000 00110011 00100000 01100011 01100001 01101110 00100000 01101111 01101110 01101100 01111001 00100000 01100010 01100101 00100000
+# 01110011 01101111 01101100 01110110 01100101 01100100 00100000 01101001 01101110 00100000 01100001 01101110 00100000 01101001 01101110 01110100 01100101 01110010
+# 01100100 01101001 01110011 01100011 01101001 01110000 01101100 01101001 01101110 01100001 01110010 01111001 00100000 01110111 01100001 01111001 00101110 00111100
