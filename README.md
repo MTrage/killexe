@@ -18,3 +18,6 @@ killexe is a simple script that can show which *.exe tasks are currently running
     rm killexe
     chmod +x /usr/bin/killexe
     exit
+    
+### Install (Debian/Ubuntu) with WGET
+    wget https://raw.githubusercontent.com/MTrage/killexe/master/usr/bin/killexe && sudo cp killexe /usr/bin/killexe && rm killexe && sudo chmod +x /usr/bin/killexe
